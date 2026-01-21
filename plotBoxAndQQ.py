@@ -30,7 +30,7 @@ for folder_name in folders:
     # Log(x+1) ONLY for PM values
     for col in pm_columns:
         if col in df:
-            plot_data[f"log_{col}"] = np.log(df[col] + 10)
+            plot_data[f"log_{col}"] = np.log(df[col] + 1)
 
     if plot_data.empty:
         print(f"No valid columns in {folder_name}, skipping")
