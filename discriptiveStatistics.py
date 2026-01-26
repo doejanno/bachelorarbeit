@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import os
 from glob import glob
 
@@ -16,11 +17,19 @@ variables = [
     "Humidity (%)"
 ]
 
+# Columns to transform by log(x+1)
+pm_columns = ["PM1 (ug/m3)", "PM2.5 (ug/m3)", "PM10 (ug/m3)"]
+
 for file in csv_files:
     print(f"Processing: {file}")
     df = pd.read_csv(file)
 
     stats = []
+
+    # If i want pm to be transformed by log(x+1)
+    # for col in pm_columns:
+    #     if col in df:
+    #         df[col]= np.log(df[col] +1)
 
     for var in variables:
         if var not in df.columns:
