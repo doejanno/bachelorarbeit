@@ -1,0 +1,3 @@
+ONLINEMESSUNG
+Datum/Uhrzeit;22.08.2025 02:08:15
+Nr.;Datum/Uhrzeit;IR1 [W/m2] = m1 /E1/"800016";SR1 [W/m2] = m2 /E2/"800016";IR2 [W/m2] = m3 /E3/"800016";SR2 [W/m2] = m4 /E4/"800016";Temp [degC] = m5 /E5/"800016";Luftdruck [mbar] = m6 /E6/"190039";Bodenfeucht [vol%] = m7 /E7/"190039";RH-oben [%RH] = m8 /E8/"190039";LT-oben [degC] = n5 /E13/"190040";RH-unten [%RH] = n6 /E14/"190040";LT-unten [degC] = n7 /E15/"190040";Windgeschw [m/s] = n8 /E16/"190040";Windricht [grad] = p1 /E17/"190040";Bodentemp-1 [degC] = r3 /E27/"158060";Bodentemp-2 [degC] = r4 /E28/"158060";Zaehler1 [Impulse] = e1;Regen-abs [mm] = c1=e1*0,1;Zaehler1-Differenz [Impulse] = e5;Regen-rel [mm] = c2=e5*0,1;Dauer Zählvorgang [s] = f8;Vbatt [V] = f1;Tintern [degC] = f3;Alarmstufe [] = f5;Feldstärke 1 [] = f6

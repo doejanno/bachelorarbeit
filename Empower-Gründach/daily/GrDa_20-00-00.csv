@@ -1,0 +1,18 @@
+﻿Geraetetyp;000
+Geraetename;LT6-digi-GPRS
+Beschreibung;LT6-digi-GPRS
+Seriennummer;A27210
+Geraetenummer;
+Standortname;
+Standortnummer;56-6182
+Messstellennummer;TH Parkplatz
+Hochwert;0,00;[m]
+Rechtswert;0,00;[m]
+Messpunkthoehe MPH;0,000;[mNN]
+Einhaengetiefe ETH;0,000;[m]
+Ausgelesene Daten von:;1120809;bis:;1124369
+Ausgelesen am:;.. ::;von:;User
+Kanal zum Ueberwachen:;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Datum / Uhrzeit;IR1 [W/m2] = m1 /E1/"800012";SR1 [W/m2] = m2 /E2/"800012";IR2 [W/m2] = m3 /E3/"800012";SR2 [W/m2] = m4 /E4/"800012";Temp [degC] = m5 /E5/"800012";Luftdruck [mbar] = m6 /E6/"190026";Bodenfeucht [vol%] = m7 /E7/"190026";RH-unten [%RH] = m8 /E8/"190026";LT-unten [degC] = n5 /E13/"190027";RH-oben [%RH] = n6 /E14/"190027";LT-oben [degC] = n7 /E15/"190027";Windgeschw [m/s] = n8 /E16/"190027";Windricht [grad] = p1 /E17/"190027";Bodentemp-1 [degC] = r3 /E27/"158056";Bodentemp-2 [degC] = r4 /E28/"158056";Zaehler1 [Impulse] = e1;Regen-abs [mm] = c1=e1*0,1;Zaehler1-Differenz [Impulse] = e5;Regen-rel [mm] = c2=e5*0,1;Dauer Zählvorgang = f8;Vbatt [V] = f1;Tintern [degC] = f3;Alarmstufe = f5;Feldstärke 1 = f6;Seriennummer;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+.. ::;0,000;0,000;0,000;0,000;0,000;0,000;0,000;0,000;0,000;0,000;0,000;0,000;0,000;0,000;0,000;;0,0;;0,0;;0,00;0,00;;;A27210;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
