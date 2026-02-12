@@ -35,7 +35,9 @@ for folder_name in folders:
         df = df[existing_cols]
 
         if "Datetime_start(UTC)" in df.columns:
-            df["Datetime_start(UTC)"] = pd.to_datetime(df["Datetime_start(UTC)"], errors="coerce")
+            df["Datetime_start(UTC)"] = pd.to_datetime(
+                df["Datetime_start(UTC)"], errors="coerce"
+            )
 
         dfs.append(df)
 
@@ -46,8 +48,30 @@ for folder_name in folders:
     combined = pd.concat(dfs, ignore_index=True, sort=False)
     combined = combined.sort_values("Datetime_start(UTC)").reset_index(drop=True)
 
-    csv_out = os.path.join(base_path, f"{folder_name}_temperature_PM_humidity.csv")
-    combined.to_csv(csv_out, index=False)
+    # -----------------------------
+    # RESAMPLING PART
+    # -----------------------------
+    combined = combined.set_index("Datetime_start(UTC)")
+
+    mean_10min = combined.resample("10min").mean()
+    mean_30min = combined.resample("30min").mean()
+
+    # Reset index so datetime becomes a column again
+    mean_10min = mean_10min.reset_index()
+    mean_30min = mean_30min.reset_index()
+
+    # -----------------------------
+    # SAVE FILES
+    # -----------------------------
+    csv_out_raw = os.path.join(base_path, f"{folder_name}_temperature_PM_humidity.csv")
+    csv_out_10 = os.path.join(base_path, f"{folder_name}_mean_10min.csv")
+    csv_out_30 = os.path.join(base_path, f"{folder_name}_mean_30min.csv")
+
+    combined.reset_index().to_csv(csv_out_raw, index=False)
+    mean_10min.to_csv(csv_out_10, index=False)
+    mean_30min.to_csv(csv_out_30, index=False)
 
     print(f"Finished {folder_name}")
-    print(f"  Combined CSV saved to: {csv_out}")
+    print(f"  Raw CSV saved to: {csv_out_raw}")
+    print(f"  10-min mean saved to: {csv_out_10}")
+    print(f"  30-min mean saved to: {csv_out_30}")
